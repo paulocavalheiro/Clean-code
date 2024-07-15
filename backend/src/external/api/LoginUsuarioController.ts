@@ -1,10 +1,11 @@
 import { Express } from "express";
 import LoginUsuario from "@/core/usuario/service/LoginUsuario";
 import ProvedorJwt from "./ProvedorJwt";
+import UsuarioMiddleware from "./UsuarioMiddleware";
 
 export default class LoginUsuarioController {
   constructor(servidor: Express, casoDeUso: LoginUsuario) {
-    const jwtProv = new ProvedorJwt("jwtSecret123")
+    const jwtProv = new ProvedorJwt("jwtSecret123");
     servidor.post("/api/usuarios/login", async (req, resp) => {
       try {
         const usuario = await casoDeUso.executar({

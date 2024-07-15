@@ -2,7 +2,7 @@ import express from 'express'
 import Bcrypt from './external/auth/Bcrypt'
 import RepositorioPg from './external/database/RepositorioPg'
 import RegistroUsuario from './core/usuario/service/RegistroUsuario'
-import RegistrarUsuarioController from './external/api/registrarUsuarioController'
+import RegistrarUsuarioController from './external/api/RegistrarUsuarioController'
 import LoginUsuario from './core/usuario/service/LoginUsuario'
 import LoginUsuarioController from './external/api/LoginUsuarioController'
 
